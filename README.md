@@ -120,19 +120,27 @@ Profit Margin,0.18
 
 ## How to Run
 1. Clone the repository
+```
 git clone https://github.com/yourusername/autonomousagent.git
 cd autonomousagent
+```
 
-2. Install dependencies
+3. Install dependencies
+```
 pip install -r requirements.txt
+```
 
-3. Add your API keys
+5. Add your API keys
 Create a .env file in the root folder:
+```
 OPENAI_API_KEY=your_openai_key
 TAVILY_API_KEY=your_tavily_key
+```
 
-4. Run the app
+7. Run the app
+```
 streamlit run main.py
+```
 Then go to http://localhost:8501 in your browser.
 
 ## Frontend of the app
