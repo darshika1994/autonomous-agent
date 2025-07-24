@@ -12,9 +12,10 @@ This autonomous agent simulates a financial analyst's workflow using a behavior 
 
 <p align="center">
   <img src="workflow.png" alt="Workflow Diagram" width="600"/>
+  <br/>
+  <em>Diagram: Behavior tree structure of the financial agent</em>
 </p>
 
-_Diagram: Behavior tree structure of the financial agent_
 
 ### Step-by-step process:
 
