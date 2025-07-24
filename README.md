@@ -115,7 +115,7 @@ Revenue,1000000
 Operating Income,250000
 Net Income,180000
 Profit Margin,0.18
-
+```
 ---
 
 ## How to Run
@@ -134,5 +134,10 @@ TAVILY_API_KEY=your_tavily_key
 4. Run the app
 streamlit run main.py
 Then go to http://localhost:8501 in your browser.
+
+## Frontend of the app
+
+![Workflow Diagram](images/UI.png)
+
 
 
