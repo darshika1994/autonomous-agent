@@ -6,6 +6,11 @@ The system is inspired by real-world assistant workflows used in finance, busine
 
 ---
 
+## Workflow
+
+![Workflow Diagram](workflow.png)
+
+
 ## Why This Project?
 
 Manual financial analysis is time-consuming and error-prone. Businesses often need quick, AI-assisted decision support. This project demonstrates how an autonomous agent can:
