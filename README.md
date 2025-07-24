@@ -137,7 +137,20 @@ Then go to http://localhost:8501 in your browser.
 
 ## Frontend of the app
 
-![Workflow Diagram](images/UI.png)
+### 1. UI - Upload CSV and Enter Competitor Names
+![UI](frontend/UI.png)
 
+---
 
+### 2. Analyze Company Financials
+![Analyze Data](frontend/analyze_data.png)
 
+---
+
+### 3. Research Competitor Performance
+![Research Competitors](frontend/research_competitors.png)
+
+---
+
+### 4. Compare Performance Results
+![Compare Performance](frontend/compare_performance.png)
