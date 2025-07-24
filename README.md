@@ -10,11 +10,27 @@ The system is inspired by real-world assistant workflows used in finance, busine
 
 ![Workflow Diagram](workflow.png)
 
+This autonomous agent simulates a financial analyst's workflow using a behavior tree built with LangGraph. It follows a logical, step-by-step decision process:
+1. Gather Financials: The user uploads a .csv file containing company metrics like revenue, net income, and profit margin.
+2. Analyze Data: The agent summarizes the internal performance using LLM prompts to highlight trends, strengths, and weaknesses.
+3. Research Competitors: Using the Tavily API, the agent collects real-time data on competitors named by the user (e.g., Microsoft, Nvidia).
+4. Compare Performance: It compares the uploaded company’s data with competitors to understand its position in the market.
+5. Optional Insights: Based on conditions, it may fetch customer feedback or expert reviews for deeper analysis.
+6. Write Report: Finally, the agent uses OpenAI to generate a clear, professional financial summary displayed in the app.
+
+The behavior tree uses:
+1. Sequences to ensure steps run in order
+2. Conditions to make decisions dynamically
+3. Selectors to choose alternate paths if needed
+4. Actions to execute tasks like analysis, search, and report writing
+
+This makes the agent modular, flexible, and capable of adapting to the data it receives — just like a real financial assistant.
+
+---
 
 ## Why This Project?
 
 Manual financial analysis is time-consuming and error-prone. Businesses often need quick, AI-assisted decision support. This project demonstrates how an autonomous agent can:
-
 - Read structured financial data
 - Think logically in steps (not random black-box output)
 - Dynamically respond to input and conditions
