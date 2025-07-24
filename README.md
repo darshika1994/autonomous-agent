@@ -8,23 +8,30 @@ The system is inspired by real-world assistant workflows used in finance, busine
 
 ## Workflow
 
-![Workflow Diagram](workflow.png)
-
 This autonomous agent simulates a financial analyst's workflow using a behavior tree built with LangGraph. It follows a logical, step-by-step decision process:
-1. Gather Financials: The user uploads a .csv file containing company metrics like revenue, net income, and profit margin.
-2. Analyze Data: The agent summarizes the internal performance using LLM prompts to highlight trends, strengths, and weaknesses.
-3. Research Competitors: Using the Tavily API, the agent collects real-time data on competitors named by the user (e.g., Microsoft, Nvidia).
-4. Compare Performance: It compares the uploaded company’s data with competitors to understand its position in the market.
-5. Optional Insights: Based on conditions, it may fetch customer feedback or expert reviews for deeper analysis.
-6. Write Report: Finally, the agent uses OpenAI to generate a clear, professional financial summary displayed in the app.
+
+<p align="center">
+  <img src="workflow.png" alt="Workflow Diagram" width="600"/>
+</p>
+
+_Diagram: Behavior tree structure of the financial agent_
+
+### Step-by-step process:
+
+1. **Gather Financials**: The user uploads a `.csv` file containing metrics like revenue, net income, and profit margin.  
+2. **Analyze Data**: The agent uses OpenAI to summarize trends, strengths, and weaknesses.  
+3. **Research Competitors**: The Tavily API fetches real-time data on competitors provided by the user (e.g., Microsoft, Nvidia).  
+4. **Compare Performance**: The agent compares your company's metrics with competitors.  
+5. **Optional Insights**: Based on conditions, the agent may collect customer feedback or expert reviews.  
+6. **Write Report**: A professional financial summary is generated and displayed using Streamlit.
 
 The behavior tree uses:
-1. Sequences to ensure steps run in order
-2. Conditions to make decisions dynamically
-3. Selectors to choose alternate paths if needed
-4. Actions to execute tasks like analysis, search, and report writing
+- Sequences to ensure steps run in order  
+- Conditions to make decisions dynamically  
+- Selectors to choose alternate paths if needed  
+- Actions to perform tasks like CSV analysis, web search, and report writing
 
-This makes the agent modular, flexible, and capable of adapting to the data it receives — just like a real financial assistant.
+This makes the agent modular, flexible, and capable of adapting to the data it receives — just like a real assistant.
 
 ---
 
@@ -107,15 +114,17 @@ All decision steps are tracked through a shared `AgentState`, which stores input
 
 ---
 
-## Example CSV Format
+## Sample Financial Data (CSV Format Preview)
 
-```csv
-Metric,Value
-Revenue,1000000
-Operating Income,250000
-Net Income,180000
-Profit Margin,0.18
-```
+| Year | Revenue   | Cost of Goods Sold | Operating Expenses | Net Income |
+|------|-----------|--------------------|--------------------|------------|
+| 2018 | 5,000,000 | 3,000,000          | 1,500,000          | 500,000    |
+| 2019 | 5,500,000 | 3,200,000          | 1,600,000          | 700,000    |
+| 2020 | 6,000,000 | 3,400,000          | 1,700,000          | 900,000    |
+| 2021 | 6,500,000 | 3,600,000          | 1,800,000          | 1,100,000  |
+| 2022 | 7,000,000 | 3,800,000          | 1,900,000          | 1,300,000  |
+| 2023 | 7,500,000 | 4,000,000          | 2,000,000          | 1,500,000  |
+
 ---
 
 ## How to Run
